@@ -57,3 +57,4 @@ except KeyboardInterupt:
    print("closing...")
    sleep(0.5)
    print("closed")
+   sys.exit()
