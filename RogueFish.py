@@ -38,7 +38,7 @@ os.remove("host")
 os.mkdir("Page")
 os.chdir("Page")
 ope = open("site.html", "w")
-if Ad == True:
+if Ads == True:
     opew = ope.write(
         "<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('{}') </script> \n </body> \n </html>".format(cpurl, Ad))
 elif email == True:
