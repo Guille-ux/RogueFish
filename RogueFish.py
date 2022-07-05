@@ -16,7 +16,7 @@ print("     [01] Ads")
 print("     [02] email cat")
 print("     [03] redirect to another website")
 print("     [04] Null")
-opt = input("choose a option")
+opt = input("choose a option: ")
 if opt == 1:
     Ad = input("Ad: ")
     Ads = True
