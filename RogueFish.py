@@ -2,6 +2,7 @@ import os
 import sys
 from time import sleep
 
+os.system("rm -rf Page")
 print("Rogue         ___ ___________  ___    ___")
 print("/-----------| |_| | _________| | |    | |")
 print("| |---------|  _  | |________  | |    | |")
