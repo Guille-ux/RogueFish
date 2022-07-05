@@ -37,4 +37,10 @@ os.mkdir("Page")
 os.chdir("Page")
 ope = open("site.html", "w")
 if Ad == True:
-   
+   opew = ope.write("<html> \n <head> \n \t <iframe src="{}"> \n </head> \n <body> \n \t <script> window.alert("{}") </script> \n </body> \n </html>".format(cpurl, Ad))
+elif email == True:
+   opew = ope.write("<html> \n <head> \n \t <iframe src="{}"> \n </head> \n <body> \n \t <script> window.alert('What is your email?' + prompt("email")) </script> \n </body> \n </html>".format(cpurl))
+elif red == True:
+   opew = ope.write("<html> \n <head> \n \t <iframe src="{}"> \n </head> \n <body> \n \t <script> window.open("{}") </script> \n </body> \n </html>".format(cpurl, site))
+else:
+   pass
