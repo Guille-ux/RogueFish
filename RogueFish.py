@@ -26,3 +26,15 @@ elif opt == 3:
    red = True
 else:
    pass
+os.system("hostname > host")
+op = open("host")
+opr = op.read()
+op.close()
+host = input("Host of the site: ")
+os.system("hostname {}".format(host))
+os.remove("host")
+os.mkdir("Page")
+os.chdir("Page")
+ope = open("site.html", "w")
+if Ad == True:
+   
