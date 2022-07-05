@@ -18,16 +18,6 @@ print("     [02] email cat")
 print("     [03] redirect to another website")
 print("     [04] Null")
 opt = input("choose a option: ")
-if opt == 1:
-    Ad = input("Ad: ")
-    Ads = True
-elif opt == 2:
-    email = True
-elif opt == 3:
-    site = input("site to redirect")
-    red = True
-else:
-    pass
 os.system("hostname > host")
 op = open("host")
 opr = op.read()
@@ -38,12 +28,16 @@ os.remove("host")
 os.mkdir("Page")
 os.chdir("Page")
 ope = open("site.html", "w")
-if Ads == True:
-    opew = ope.write(
-        "<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('{}') </script> \n </body> \n </html>".format(cpurl, Ad))
-elif email == True:
+if opt == 1:
+    Ad = input("Ad: ")
+    opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('{}') </script> \n </body> \n </html>".format(cpurl, Ad))
+elif opt == 2:
     opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('What is your email?' + prompt('email')) </script> \n </body> \n </html>".format(cpurl))
-elif red == True:
+elif opt == 3:
+    site = input("site to redirect")
+    red = True
+else:
+    pass
     opew = ope.write(
         "<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.open('{}') </script> \n </body> \n </html>".format(cpurl, site))
 else:
