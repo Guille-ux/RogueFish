@@ -45,10 +45,4 @@ print("press ctrl + c to quit")
 try:
    os.system("python3 -m http.server 8080")
 except KeyboardInterupt:
-    print("Restoring...")
-    os.system("hostname {}".format(opr))
-    sleep(0.5)
-    print("closing...")
-    sleep(0.5)
-    print("closed")
     sys.exit()
