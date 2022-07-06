@@ -23,8 +23,6 @@ os.chdir("/etc")
 ok = open("hostname", "w")
 okw = ok.write(host)
 ok.close()
-os.mkdir("Page")
-os.chdir("Page")
 ope = open("site.html", "w")
 if opt == 1:
     Ad = input("Ad: ")
