@@ -3,7 +3,6 @@ import sys
 from time import sleep
 
 sleep(1.5)
-os.system("rm -rf site.html")
 print("Rogue         ___ ___________  ___    ___")
 print("/-----------| |_| | _________| | |    | |")
 print("| |---------|  _  | |________  | |    | |")
@@ -15,6 +14,7 @@ print("| |           | |              |_|    |_|")
 print("|_|           |_| By guille-exploit@protonmail.com")
 cpurl = input("site to clone: ")
 print("     [01] Ads")
+
 print("     [02] email cat")
 print("     [03] redirect to another website")
 print("     [04] Null")
