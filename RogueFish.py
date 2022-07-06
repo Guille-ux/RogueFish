@@ -35,13 +35,9 @@ elif opt == 2:
     opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.alert('What is your email?' + prompt('email')) </script> \n </body> \n </html>".format(cpurl))
 elif opt == 3:
     site = input("site to redirect")
-    red = True
+    opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.open('{}') </script> \n </body> \n </html>".format(cpurl, site))
 else:
-    pass
-    opew = ope.write(
-        "<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.open('{}') </script> \n </body> \n </html>".format(cpurl, site))
-else:
-    pass
+    opew = ope.write("<html> \n <head> \n \t <iframe src='{}'> \n </head> \n <body> \n \t <script> window.open('{}') </script> \n </body> \n </html>".format(cpurl, site))
 ope.close()
 print("starting server...")
 print("sever started.")
