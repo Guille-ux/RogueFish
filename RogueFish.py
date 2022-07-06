@@ -2,7 +2,8 @@ import os
 import sys
 from time import sleep
 
-os.system("rm -rf Page")
+sleep(1.5)
+os.system("rm -rf site.html")
 print("Rogue         ___ ___________  ___    ___")
 print("/-----------| |_| | _________| | |    | |")
 print("| |---------|  _  | |________  | |    | |")
