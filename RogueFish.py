@@ -14,7 +14,6 @@ print("| |           | |              |_|    |_|")
 print("|_|           |_| By guille-exploit@protonmail.com")
 cpurl = input("site to clone: ")
 print("     [01] Ads")
-
 print("     [02] email cat")
 print("     [03] redirect to another website")
 print("     [04] Null")
@@ -40,6 +39,6 @@ print("starting server...")
 print("sever started.")
 print("press ctrl + c to quit")
 try:
-   os.system("python3 -m http.server 8080")
+   os.system("sudo python3 -m http.server 80")
 except KeyboardInterupt:
     sys.exit()
