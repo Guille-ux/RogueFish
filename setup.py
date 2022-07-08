@@ -1,4 +1,4 @@
 import os
 
-os.system("cat /etc/hostname >> host.txt")
+os.system("domainname > host.txt")
 print("setup are finished")
